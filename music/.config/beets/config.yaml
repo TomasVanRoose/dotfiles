@@ -1,0 +1,10 @@
+directory: ~/Music
+library: ~/.config/beets/musiclibrary.blb
+plugins: fromfilename ftintitle mpdstats fetchart embedart edit mpdupdate
+
+import:
+    # Don't copy files but move them
+    move: yes
+
+fetchart:
+    sources: filesystem coverart amazon albumart wikipedia
