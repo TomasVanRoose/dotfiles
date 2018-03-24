@@ -1,3 +1,5 @@
+alias ls="ls -lG"
+
 alias config="$EDITOR $HOME/.zshrc"
 alias reload="source $HOME/.zshrc"
 
