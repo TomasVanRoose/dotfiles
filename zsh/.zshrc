@@ -1,8 +1,10 @@
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="pure"
+ZSH_THEME="refined"
 
 plugins=(git z zsh-autosuggestions)
+
+source $ZSH/oh-my-zsh.sh
 
 # User config
 export DEFAULT_USER=`whoami`
@@ -16,5 +18,8 @@ export DOTFILES=$HOME/.dotfiles
 
 # Editor
 export EDITOR=vim
+
+# Aliases
+source $HOME/.aliases.sh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
