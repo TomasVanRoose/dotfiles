@@ -23,4 +23,8 @@ export EDITOR=vim
 # Aliases
 source $HOME/.aliases.sh
 
+# Virtualenvwrapper
+export WORKON_HOME=$HOME/.virtualenvs
+source /usr/local/bin/virtualenvwrapper.sh
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
