@@ -4,6 +4,9 @@ call plug#begin()
 " Colorscheme
 Plug 'arcticicestudio/nord-vim'
 
+" Autocompletion
+Plug 'Valloric/YouCompleteMe'
+
 call plug#end()
 
 " ========== General Config ==========
