@@ -1,7 +1,16 @@
-# dotfiles
+# Dotfiles
 My personal dotfiles
 
 This repository works with the GNU `stow` command.
+
+### ZShell prompt autosuggestions
+```
+git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+```
+_iTerm + solarized dark fix_
+```
+echo ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=10\' >> $ZSH_CUSTOM/zsh-autosuggestions_custom.zsh 
+```
 
 ### Mediakeys for MPD
 [osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
