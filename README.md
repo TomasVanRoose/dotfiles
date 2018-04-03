@@ -1,7 +1,7 @@
 # Dotfiles
 My personal dotfiles
 
-This repository works with the GNU `stow` command.
+This repository works with the [GNU stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) command.
 
 ### ZShell prompt autosuggestions
 ```
