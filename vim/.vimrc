@@ -6,6 +6,10 @@ Plug 'arcticicestudio/nord-vim'
 
 " Autocompletion
 Plug 'Valloric/YouCompleteMe'
+" Generator for C completion
+Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+
+" Coffeescript
 Plug 'kchmck/vim-coffee-script'
 
 " Tmux navigation
@@ -64,6 +68,10 @@ set softtabstop=4
 set tabstop=4
 set shiftround
 set expandtab
+
+
+" ========== YouCompleteMe ==========
+let g:ycm_confirm_extra_conf = 0
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
