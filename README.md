@@ -3,6 +3,8 @@ My personal dotfiles
 
 This repository works with the GNU `stow` command.
 
+### Mediakeys for MPD
+[osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
 
 ### Bin
 For `bin` you have to use the following command: `stow -t /usr/local/bin bin`.
