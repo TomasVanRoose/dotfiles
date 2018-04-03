@@ -5,7 +5,6 @@ mpd_port = 6600
 mpd_connection_timeout = 5
 mpd_music_dir = "/Volumes/MacintoshHD/Tomas/Music"
 mpd_crossfade_time = 0
-execute_on_song_change = "notify-song.sh"
 playlist_display_mode = classic
 search_engine_display_mode = classic
 playlist_editor_display_mode = classic
