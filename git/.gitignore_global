@@ -11,3 +11,4 @@ Thumbs.db
 # VIM #
 #######
 *.swp
+.ycm_extra_conf.py
