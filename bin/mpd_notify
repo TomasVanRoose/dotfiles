@@ -1,0 +1,47 @@
+import musicpd
+from select import select
+from os import getenv, path
+from subprocess import run, DEVNULL
+from sys import argv
+
+def listen_for_changes(client, music_dir):
+
+    currentalbum = ""
+    full_album_dir = ''
+
+    while True:
+        client.send_idle('player')
+        select([client], [], [])
+        events = client.fetch_idle()
+
+        if 'player' in events:
+            current = client.currentsong()
+            if current and current['album'] != currentalbum:
+                currentalbum = current['album']
+                album_dir = current['file'].split('/')[:-1]
+                full_album_dir = '/'.join(music_dir + album_dir + ['cover.jpg'])
+                if not path.isfile(full_album_dir):
+                    full_album_dir = ''
+            
+            if client.status()['state'] == 'play':
+                run(["/usr/local/bin/terminal-notifier", "-title", current['title'], "-message", current['album'] + " - " + current['artist'], "-appIcon", full_album_dir, "-group", "mpd"], stdout=DEVNULL)
+
+def main(music_dir):
+
+    client = musicpd.MPDClient()       # create client object
+    client.connect('localhost', 6600)  # connect to localhost:6600
+
+    music_dir = getenv('MPD_MUSIC_DIR', music_dir)
+    try:
+        if music_dir:
+            listen_for_changes(client, music_dir.split('/'))
+    except KeyboardInterrupt:
+        pass
+    finally:
+        client.noidle()
+        client.close() 
+        client.disconnect()
+
+if __name__ == "__main__":
+    if len(argv) > 1:
+        main(argv[1])
