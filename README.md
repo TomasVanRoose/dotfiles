@@ -4,7 +4,7 @@ My personal dotfiles
 This repository works with the GNU `stow` command.
 
 
-### Stowing bin
+### Bin
 For `bin` you have to use the following command: `stow -t /usr/local/bin bin`.
 This will symlink the binaries to the `Homebrew` bin which is already in your path.
 
