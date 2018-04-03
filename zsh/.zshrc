@@ -27,4 +27,7 @@ source $HOME/.aliases.sh
 export WORKON_HOME=$HOME/.virtualenvs
 source /usr/local/bin/virtualenvwrapper.sh
 
+# Ruby environment
+eval "$(rbenv init -)"
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

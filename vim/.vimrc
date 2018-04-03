@@ -6,6 +6,7 @@ Plug 'arcticicestudio/nord-vim'
 
 " Autocompletion
 Plug 'Valloric/YouCompleteMe'
+Plug 'kchmck/vim-coffee-script'
 
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
