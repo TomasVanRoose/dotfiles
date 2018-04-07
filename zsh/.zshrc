@@ -17,6 +17,9 @@ export LC_ALL=en_US.UTF-8
 # Dotfiles
 export DOTFILES=$HOME/.dotfiles
 
+# ssh
+export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
+
 # Editor
 export EDITOR=vim
 
@@ -31,3 +34,7 @@ source /usr/local/bin/virtualenvwrapper.sh
 eval "$(rbenv init -)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# Splashscreen
+clear
+greeter $(tput cols)
