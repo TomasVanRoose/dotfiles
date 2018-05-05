@@ -15,6 +15,9 @@ Plug 'kchmck/vim-coffee-script'
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" LaTeX
+Plug 'lervag/vimtex'
+
 call plug#end()
 
 " ========== General Config ==========

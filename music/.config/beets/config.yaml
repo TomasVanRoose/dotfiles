@@ -1,6 +1,6 @@
 directory: ~/Music
 library: ~/.config/beets/musiclibrary.blb
-plugins: fromfilename ftintitle fetchart embedart edit mpdupdate
+plugins: fromfilename ftintitle fetchart embedart edit mpdupdate web
 
 import:
     # Don't copy files but move them
