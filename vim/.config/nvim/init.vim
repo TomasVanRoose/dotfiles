@@ -13,6 +13,9 @@ Plug 'w0rp/ale'
 " Coffeescript
 "Plug 'kchmck/vim-coffee-script'
 
+" Load virtualenv that is active
+Plug 'plytophogy/vim-virtualenv'
+
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -73,9 +76,7 @@ set tabstop=4
 set shiftround
 set expandtab
 
-
-" ========== YouCompleteMe ==========
-let g:ycm_confirm_extra_conf = 0
+let g:virtualenv_auto_activate = 1
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2

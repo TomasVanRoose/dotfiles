@@ -1,0 +1,3 @@
+init-hook="
+    from pylint_venv import inithook
+    inithook()"

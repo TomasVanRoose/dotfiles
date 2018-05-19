@@ -12,12 +12,19 @@ _iTerm + solarized dark fix_
 echo ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=10\' >> $ZSH_CUSTOM/zsh-autosuggestions_custom.zsh 
 ```
 
-### Mediakeys for MPD
-[osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
-
 ### Bin
 For `bin` you have to use the following command: `stow -t /usr/local/bin bin`.
 This will symlink the binaries to the `Homebrew` bin which is already in your path.
+
+### Pylint + Virtualenv
+Pylint does not respect the currently activated virtualenv if it is not installed in every virtual environment individually. 
+This module provides a Pylint init-hook to use the same Pylint installation with different virtual environments.
+
+#### Installation
+`pip install pylint-venv`
+
+### Mediakeys for MPD
+[osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
 
 You need to add a `.plist` file to `~/Library/Launchagents/`.
 It should contain something of the following:
