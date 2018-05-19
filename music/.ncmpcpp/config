@@ -17,6 +17,7 @@ ignore_leading_the = yes
 generate_win32_compatible_filenames = no
 startup_screen = playlist
 
+user_interface = alternative
 autocenter_mode = yes
 centered_cursor = yes
 progressbar_look = "─╼ "
