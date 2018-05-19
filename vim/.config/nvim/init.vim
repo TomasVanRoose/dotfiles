@@ -5,12 +5,13 @@ call plug#begin()
 Plug 'arcticicestudio/nord-vim'
 
 " Autocompletion
-Plug 'Valloric/YouCompleteMe'
+Plug 'w0rp/ale'
+" Plug 'Valloric/YouCompleteMe'
 " Generator for C completion
-Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
+" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
 " Coffeescript
-Plug 'kchmck/vim-coffee-script'
+"Plug 'kchmck/vim-coffee-script'
 
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'

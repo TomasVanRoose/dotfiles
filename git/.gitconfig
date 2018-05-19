@@ -2,5 +2,5 @@
 	name = Tomas Van Roose
 	email = tomas.vanroose@gmail.com
 [core]
-	editor = vim
+	editor = nvim
 	excludesfile = ~/.gitignore_global
