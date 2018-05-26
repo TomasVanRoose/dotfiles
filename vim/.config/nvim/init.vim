@@ -76,7 +76,8 @@ set tabstop=4
 set shiftround
 set expandtab
 
-let g:virtualenv_auto_activate = 1
+"let g:virtualenv_auto_activate = 1
+let g:ale_completion_enabled = 1
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
