@@ -78,7 +78,9 @@ set expandtab
 
 let g:ale_completion_enabled = 1
 
+" Vimtex related
 let g:tex_flavor = 'tex'
+nnoremap <leader>w :w !detex \| wc -w<CR>
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
