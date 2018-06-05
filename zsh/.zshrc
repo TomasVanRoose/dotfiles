@@ -21,18 +21,25 @@ export DOTFILES=$HOME/.dotfiles
 export SSH_KEY_PATH="$HOME/.ssh/rsa_id"
 
 # Editor
-export EDITOR=vim
+export EDITOR=nvim
 
 # Aliases
 source $HOME/.aliases.sh
 
-# Virtualenvwrapper
-export WORKON_HOME=$HOME/.virtualenvs
-source /usr/local/bin/virtualenvwrapper.sh
+# Pyenv
+if which pyenv > /dev/null
+then 
+    eval "$(pyenv init -)"
+fi
+if which pyenv-virtualenv-init > /dev/null
+then 
+    eval "$(pyenv virtualenv-init -)"
+fi
 
 # Ruby environment
 eval "$(rbenv init -)"
 
+# Fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
 # Splashscreen
