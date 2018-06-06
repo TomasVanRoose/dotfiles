@@ -4,17 +4,12 @@ call plug#begin()
 " Colorscheme
 Plug 'arcticicestudio/nord-vim'
 
-" Autocompletion
+" Syntactic highlighting
 Plug 'w0rp/ale'
-" Plug 'Valloric/YouCompleteMe'
-" Generator for C completion
-" Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 
-" Coffeescript
-"Plug 'kchmck/vim-coffee-script'
-
-" Load virtualenv that is active
-Plug 'plytophogy/vim-virtualenv'
+" Autocompletion
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'zchee/deoplete-jedi' "Python
 
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
@@ -76,7 +71,22 @@ set tabstop=4
 set shiftround
 set expandtab
 
+" Ale
 let g:ale_completion_enabled = 1
+let g:ale_linters = {
+\   'python': ['pylint'],
+\}
+
+" Deoplete
+let g:deoplete#enable_at_startup = 1
+let g:deoplete#enable_smart_case = 1
+
+let deoplete#sources#jedi#show_docstring = 1
+let g:deoplete#sources#jedi#server_timeout = 20
+
+" deoplete tab-complete
+inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
+inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
 
 " Vimtex related
 let g:tex_flavor = 'tex'

@@ -16,12 +16,9 @@ echo ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=10\' >> $ZSH_CUSTOM/zsh-autosuggestion
 For `bin` you have to use the following command: `stow -t /usr/local/bin bin`.
 This will symlink the binaries to the `Homebrew` bin which is already in your path.
 
-### Pylint + Virtualenv
-Pylint does not respect the currently activated virtualenv if it is not installed in every virtual environment individually. 
-This module provides a Pylint init-hook to use the same Pylint installation with different virtual environments.
-
-#### Installation
-`pip install pylint-venv`
+### Virtualenvs + neovim autocomplete
+For the time being, the best solution I came up with was to install all packages needed for autocompletion.
+These are `neovim` and `pylint`.
 
 ### Mediakeys for MPD
 [osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
