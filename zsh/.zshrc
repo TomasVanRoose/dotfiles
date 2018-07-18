@@ -36,6 +36,7 @@ then
     eval "$(pyenv virtualenv-init -)"
 fi
 export PYENV_ROOT="$HOME/.pyenv"
+export PYTHON_CONFIGURE_OPTS="--enable-framework" # Make matplotlib work
 
 # Ruby environment
 eval "$(rbenv init -)"

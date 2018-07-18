@@ -11,6 +11,9 @@ Plug 'w0rp/ale'
 Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi' "Python
 
+" Rust
+Plug 'rust-lang/rust.vim'
+
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
@@ -75,6 +78,7 @@ set expandtab
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['pylint'],
+\   'rust': ['rls'],
 \}
 
 " Deoplete
