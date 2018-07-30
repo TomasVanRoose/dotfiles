@@ -7,6 +7,7 @@ alias vimrc="$EDITOR $HOME/.config/nvim/init.vim"
 alias vim="nvim"
 
 alias ugent="cd ~/Documents/UGent/Master1/Semester2/"
+alias stage="cd ~/Documents/UGent/Stage/"
 alias it="cd ~/Documents/UGent/WiNA/IT/"
 
 alias compile="./compile.sh"

@@ -78,7 +78,6 @@ set expandtab
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['pylint'],
-\   'rust': ['rls'],
 \}
 
 " Deoplete
