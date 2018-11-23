@@ -12,13 +12,20 @@ Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
 Plug 'zchee/deoplete-jedi' "Python
 
 " Rust
-Plug 'rust-lang/rust.vim'
+if executable('rustc')
+  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+  Plug 'racer-rust/vim-racer', { 'for': 'rust' }
+endif
 
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
 " LaTeX
 Plug 'lervag/vimtex'
+
+" stupid proof shit
+Plug 'let-def/vimbufsync'
+Plug 'the-lambda-church/coquille'
 
 call plug#end()
 
@@ -91,12 +98,21 @@ let g:deoplete#sources#jedi#server_timeout = 20
 inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
 inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
 
+" Racer (Rust autocompletion)
+let g:racer_experimental_completer = 1
+
+" Rust format on save
+let g:rustfmt_command = '/Users/tomas/.cargo/bin/rustfmt'
+let g:rustfmt_autosave = 1
+let g:rustfmt_fail_silently = 1
+
 " Vimtex related
 let g:tex_flavor = 'tex'
 nnoremap <leader>w :w !detex \| wc -w<CR>
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
+autocmd Filetype php setlocal ts=2 sw=2 sts=2
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2
 autocmd Filetype html setlocal ts=2 sw=2 sts=2
 

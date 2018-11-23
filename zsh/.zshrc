@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:/Applications/CoqIDE_8.8.1.app/Contents/Resources/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="refined"
