@@ -8,13 +8,13 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'w0rp/ale'
 
 " Autocompletion
-Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-Plug 'zchee/deoplete-jedi' "Python
+Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/jsonc.vim'
+Plug 'Shougo/denite.nvim'
 
 " Rust
 if executable('rustc')
   Plug 'rust-lang/rust.vim', { 'for': 'rust' }
-  Plug 'racer-rust/vim-racer', { 'for': 'rust' }
 endif
 
 " Tmux navigation
@@ -77,30 +77,33 @@ set tabstop=4
 set shiftround
 set expandtab
 
+" ======== Plugin config =========
 " Ale
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['pylint'],
 \}
 
-" Deoplete
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#enable_smart_case = 1
+" Coc
+" use <tab> for trigger completion and navigate next complete item
+function! s:check_back_space() abort
+  let col = col('.') - 1
+  return !col || getline('.')[col - 1]  =~ '\s'
+endfunction
 
-let deoplete#sources#jedi#show_docstring = 1
-let g:deoplete#sources#jedi#server_timeout = 20
+inoremap <silent><expr> <TAB>
+      \ pumvisible() ? "\<C-n>" :
+      \ <SID>check_back_space() ? "\<TAB>" :
+      \ coc#refresh()
 
-" deoplete tab-complete
-inoremap <expr><tab> pumvisible() ? "\<c-n>" : "\<tab>"
-inoremap <expr><S-tab> pumvisible() ? "\<c-p>" : "\<S-tab>"
+" Use <Tab> and <S-Tab> for navigate completion list
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+" Use <enter> to confirm complete
+noremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
+" Close preview window when completion is done
+autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 
-" Racer (Rust autocompletion)
-let g:racer_experimental_completer = 1
-
-" Rust format on save
-let g:rustfmt_command = '/Users/tomas/.cargo/bin/rustfmt'
-let g:rustfmt_autosave = 1
-let g:rustfmt_fail_silently = 1
 
 " Vimtex related
 let g:tex_flavor = 'tex'

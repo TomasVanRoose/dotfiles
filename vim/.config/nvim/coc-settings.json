@@ -1,0 +1,10 @@
+{
+    "coc.preferences.splitLabelForWord": true,
+
+    "languageserver": {
+        "clangd": {
+            "command": "/usr/local/opt/llvm/bin/clangd",
+            "filetypes": ["c", "cpp", "objc", "objcpp"]
+        }
+    }
+}
