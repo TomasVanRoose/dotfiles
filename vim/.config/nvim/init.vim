@@ -10,7 +10,6 @@ Plug 'w0rp/ale'
 " Autocompletion
 Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
 Plug 'neoclide/jsonc.vim'
-Plug 'Shougo/denite.nvim'
 
 " Rust
 if executable('rustc')
@@ -82,7 +81,10 @@ set expandtab
 let g:ale_completion_enabled = 1
 let g:ale_linters = {
 \   'python': ['pylint'],
+\   'rust': ['rls'],
 \}
+
+let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 " Coc
 " use <tab> for trigger completion and navigate next complete item
@@ -103,7 +105,8 @@ inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
 noremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 " Close preview window when completion is done
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
-
+" Expand snippets
+inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 
 " Vimtex related
 let g:tex_flavor = 'tex'

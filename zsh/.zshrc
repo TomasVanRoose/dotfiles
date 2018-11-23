@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/python/libexec/bin:$PATH"
+export PATH="/usr/local/opt/python/libexec/bin:$HOME/.yarn/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="refined"
