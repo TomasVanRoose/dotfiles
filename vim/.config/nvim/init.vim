@@ -23,10 +23,6 @@ Plug 'christoomey/vim-tmux-navigator'
 " LaTeX
 Plug 'lervag/vimtex'
 
-" stupid proof shit
-Plug 'let-def/vimbufsync'
-Plug 'the-lambda-church/coquille'
-
 call plug#end()
 
 " ========== General Config ==========
