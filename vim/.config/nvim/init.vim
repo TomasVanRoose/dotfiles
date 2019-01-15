@@ -13,7 +13,7 @@ Plug 'neoclide/jsonc.vim'
 
 " Rust
 if executable('rustc')
-  Plug 'rust-lang/rust.vim', { 'for': 'rust' }
+  Plug 'rust-lang/rust.vim'
 endif
 
 " Tmux navigation
@@ -37,6 +37,9 @@ set backspace=indent,eol,start
 set clipboard+=unnamed
 
 set mouse=a
+
+set undofile
+set undodir=~/.local/share/nvim/undo
 
 " ========== Remaps ==========
 inoremap jk <Esc>
@@ -85,6 +88,9 @@ let g:ale_linters = {
 \}
 
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
+
+" Rust
+let g:rustfmt_autosave = 1
 
 " Coc
 " use <tab> for trigger completion and navigate next complete item
