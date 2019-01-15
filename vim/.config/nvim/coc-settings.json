@@ -1,6 +1,5 @@
 {
     "coc.preferences.splitLabelForWord": true,
-    "coc.preferences.formatOnSaveFiletypes": ["rust"],
 
     "languageserver": {
         "clangd": {
