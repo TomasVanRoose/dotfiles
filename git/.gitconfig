@@ -1,6 +1,7 @@
 [user]
 	name = Tomas Van Roose
 	email = tomas.vanroose@gmail.com
+	signingkey = E62AE5D8E0ABB0EF
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
