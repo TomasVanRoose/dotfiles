@@ -22,6 +22,9 @@ Plug 'christoomey/vim-tmux-navigator'
 " LaTeX
 Plug 'lervag/vimtex'
 
+" Rails
+Plug 'tpope/vim-rails'
+
 call plug#end()
 
 " ========== General Config ==========
@@ -81,7 +84,7 @@ set expandtab
 
 " ======== Plugin config =========
 " Ale
-let g:ale_completion_enabled = 1
+let g:ale_completion_enabled = 0
 let g:ale_linters = {
 \   'python': ['pylint'],
 \   'rust': ['rls'],
