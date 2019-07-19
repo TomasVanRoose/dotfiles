@@ -108,3 +108,4 @@ chunkc core::load ffm.so
 
 chunkc tiling::rule --owner Finder --state float
 chunkc tiling::rule --owner \"App Store\" --state float
+chunkc tiling::rule --owner Calculator --state float
