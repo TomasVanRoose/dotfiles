@@ -20,6 +20,13 @@ This will symlink the binaries to the `Homebrew` bin which is already in your pa
 For the time being, the best solution I came up with was to install all packages needed for autocompletion.
 These are `neovim` and `pylint`.
 
+### Tmux
+If Tmux exits immediatly, this is because of the `reattach-to-user-namespace` option.
+Solve this by downloading this package:
+```
+brew install reattach-to-user-namespace
+```
+
 ### Mediakeys for MPD
 [osx-mpd-keys](https://github.com/pushrax/osxmpdkeys)
 
