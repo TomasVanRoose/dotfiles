@@ -1,4 +1,4 @@
-export PATH="/usr/local/opt/python/libexec/bin:$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/sbin/:/usr/local/opt/python/libexec/bin:$HOME/.cargo/bin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="refined"
@@ -26,7 +26,7 @@ export EDITOR=nvim
 # Aliases
 source $HOME/.aliases.sh
 
-# Pyenv
+# Pyenv // THIS IS DEPRECATED
 if command -v pyenv 1>/dev/null 2>&1
 then 
     eval "$(pyenv init -)"
