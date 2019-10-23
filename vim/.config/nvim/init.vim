@@ -19,6 +19,10 @@ endif
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
 
+" Fuzzy find
+Plug '/usr/local/opt/fzf'
+Plug 'junegunn/fzf.vim'
+
 " LaTeX
 Plug 'lervag/vimtex'
 
@@ -116,6 +120,18 @@ noremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<cr>"
 autocmd! CompleteDone * if pumvisible() == 0 | pclose | endif
 " Expand snippets
 inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
+
+" Fuzzy find
+set rtp+=/usr/local/opt/fzf
+
+" <leader> + f -> open fuzzy find
+nnoremap <leader>f :FZF<CR>
+" <leader> + e -> open in this buffer
+nnoremap <leader>e :call fzf#run({'sink': 'e', 'down': '30%'})<CR>
+" <leader> + sp -> split horizontally
+nnoremap <leader>sp :call fzf#run({'sink': 'split', 'down': '30%'})<CR>
+" <leader> + vs -> split vertically
+nnoremap <leader>vs :call fzf#run({'sink': 'vsplit', 'down': '30%'})<CR>
 
 " Vimtex related
 let g:tex_flavor = 'tex'

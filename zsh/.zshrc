@@ -1,4 +1,4 @@
-export PATH="/usr/local/sbin/:/usr/local/opt/python/libexec/bin:$HOME/.cargo/bin:$PATH"
+export PATH="/usr/local/sbin/:/usr/local/opt/python/libexec/bin:/usr/local/opt/ruby/bin:$HOME/.cargo/bin:/Library/TeX/texbin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 
 ZSH_THEME="refined"
