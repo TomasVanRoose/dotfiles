@@ -29,6 +29,9 @@ Plug 'lervag/vimtex'
 " Rails
 Plug 'tpope/vim-rails'
 
+" Tera (templating language)
+Plug 'Glench/Vim-Jinja2-Syntax'
+
 call plug#end()
 
 " ========== General Config ==========
@@ -98,6 +101,7 @@ let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 " Rust
 let g:rustfmt_autosave = 1
+let g:rustfmt_options = "--edition 2018"
 
 " Coc
 " use <tab> for trigger completion and navigate next complete item
@@ -142,6 +146,7 @@ autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
 autocmd Filetype php setlocal ts=2 sw=2 sts=2
 autocmd Filetype ruby setlocal ts=2 sw=2 sts=2
 autocmd Filetype html setlocal ts=2 sw=2 sts=2
+autocmd BufNewFile,BufRead *.tera set ft=jinja
 
 " Paste contents of file when new file is created
 autocmd BufNewFile  *.tex   0r $HOME/.config/nvim/skeletons/skeleton.tex
