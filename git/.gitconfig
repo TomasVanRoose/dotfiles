@@ -1,7 +1,11 @@
 [user]
 	name = Tomas Van Roose
 	email = tomas.vanroose@gmail.com
-	signingkey = E62AE5D8E0ABB0EF
+	signingkey = 15A06259885A1759
 [core]
 	editor = nvim
 	excludesfile = ~/.gitignore_global
+[commit]
+    gpgSign = true
+[gpg]
+    program = /usr/local/bin/gpg
