@@ -6,5 +6,7 @@
             "command": "/usr/local/opt/llvm/bin/clangd",
             "filetypes": ["c", "cpp", "objc", "objcpp"]
         }
-    }
+    },
+    "rust-analyzer.inlayHints.chainingHints": true,
+    "CocHintSign": "Comment",
 }

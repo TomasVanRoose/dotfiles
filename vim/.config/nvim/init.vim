@@ -8,13 +8,16 @@ Plug 'arcticicestudio/nord-vim'
 Plug 'w0rp/ale'
 
 " Autocompletion
-Plug 'neoclide/coc.nvim', {'tag': '*', 'do': { -> coc#util#install()}}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'neoclide/jsonc.vim'
 
 " Rust
 if executable('rustc')
   Plug 'rust-lang/rust.vim'
 endif
+
+" Swift
+Plug 'bumaociyuan/vim-swift'
 
 " Tmux navigation
 Plug 'christoomey/vim-tmux-navigator'
@@ -78,6 +81,8 @@ nnoremap <silent> <c-\> :TmuxNavigatePrevious<cr>
 syntax enable
 colorscheme nord
 let g:nord_italic_comments = 1
+" set hint as comment
+hi! link CocHintSign Comment
 
 " ========== Indentation ==========
 set autoindent
@@ -95,13 +100,14 @@ let g:ale_completion_enabled = 0
 let g:ale_linters = {
 \   'python': ['pylint'],
 \   'rust': ['rls'],
+\   'cpp': ['clangtidy'],
 \}
 
+let g:ale_c_parse_compile_commands = 1
 let g:ale_rust_cargo_use_clippy = executable('cargo-clippy')
 
 " Rust
 let g:rustfmt_autosave = 1
-let g:rustfmt_options = "--edition 2018"
 
 " Coc
 " use <tab> for trigger completion and navigate next complete item
@@ -140,6 +146,7 @@ nnoremap <leader>vs :call fzf#run({'sink': 'vsplit', 'down': '30%'})<CR>
 " Vimtex related
 let g:tex_flavor = 'tex'
 nnoremap <leader>w :w !detex \| wc -w<CR>
+noremap <leader>o :execute 'silent ! open -a Preview && open -a iTerm'<CR>
 
 autocmd Filetype javascript setlocal ts=2 sw=2 sts=2
 autocmd Filetype typescript setlocal ts=2 sw=2 sts=2
