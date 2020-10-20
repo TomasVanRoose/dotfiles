@@ -1,7 +1,7 @@
-export PATH="/usr/local/sbin/:/usr/local/opt/python/libexec/bin:/usr/local/opt/ruby/bin:$HOME/.cargo/bin:/Library/TeX/texbin:$PATH"
+export PATH="/usr/local/sbin/:/usr/local/opt/python/libexec/bin:/usr/local/opt/llvm/bin:/usr/local/opt/ruby/bin:/usr/local/opt/openjdk/bin:$HOME/.cargo/bin:/Library/TeX/texbin:$PATH"
 export ZSH=$HOME/.oh-my-zsh
 
-ZSH_THEME="refined"
+eval "$(starship init zsh)"
 
 plugins=(git z zsh-autosuggestions osx)
 
