@@ -54,6 +54,10 @@ set mouse=a
 set undofile
 set undodir=~/.local/share/nvim/undo
 
+" Enable local vimrc
+set exrc
+set secure
+
 " ========== Remaps ==========
 inoremap jk <Esc>
 inoremap jj j
