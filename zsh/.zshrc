@@ -21,6 +21,8 @@ compinit
 # History
 bindkey '\e[A' history-beginning-search-backward
 bindkey '\e[B' history-beginning-search-forward
+setopt inc_append_history
+setopt share_history
 
 # User config
 export DEFAULT_USER=`whoami`
@@ -66,6 +68,8 @@ eval "$(rbenv init -)"
 
 # Fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+export ARDMK_DIR=/usr/local/opt/arduino-mk
 
 # Splashscreen
 clear

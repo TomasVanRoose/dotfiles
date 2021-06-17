@@ -8,5 +8,6 @@
         }
     },
     "rust-analyzer.inlayHints.chainingHints": true,
+    "rust-analyzer.cargo.allFeatures": true,
     "CocHintSign": "Comment",
 }
