@@ -1,4 +1,6 @@
-alias ls="ls -lG"
+alias exa="exa -l --icons"
+alias ls="exa"
+alias la="exa -a -a"
 
 alias config="$EDITOR $HOME/.zshrc"
 alias reload="source $HOME/.zshrc"
