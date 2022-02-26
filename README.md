@@ -9,13 +9,15 @@ After `.zsh` is loaded, the command `miniplug` is available. You should now run
 miniplug install
 ```
 
-### iTerm 2 color schem
+### iTerm 2 color scheme
 Install the [Nord color scheme](https://github.com/arcticicestudio/nord-iterm2)
 
-_iTerm + solarized dark fix_
+Install a [Nerd Font](https://www.nerdfonts.com/font-downloads) through homebrew:
 ```
-echo ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=10\' >> $ZSH_CUSTOM/zsh-autosuggestions_custom.zsh 
+brew tap homebrew/cask-fonts &&
+brew install --cask font-<FONT-NAME>-nerd-font
 ```
+
 
 ### Bin
 For `bin` you have to use the following command: `stow -t /usr/local/bin bin`.
