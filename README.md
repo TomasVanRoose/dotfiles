@@ -3,11 +3,14 @@ My personal dotfiles
 
 This repository works with the [GNU stow](http://brandon.invergo.net/news/2012-05-26-using-gnu-stow-to-manage-your-dotfiles.html) command.
 
-### ZShell prompt autosuggestions
+### ZShell miniplug
+After `.zsh` is loaded, the command `miniplug` is available. You should now run
 ```
-git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
+miniplug install
 ```
-_[iTerm Nord color scheme](https://github.com/arcticicestudio/nord-iterm2)_
+
+### iTerm 2 color schem
+Install the [Nord color scheme](https://github.com/arcticicestudio/nord-iterm2)
 
 _iTerm + solarized dark fix_
 ```
