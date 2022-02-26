@@ -7,6 +7,8 @@ This repository works with the [GNU stow](http://brandon.invergo.net/news/2012-0
 ```
 git clone git://github.com/zsh-users/zsh-autosuggestions $ZSH_CUSTOM/plugins/zsh-autosuggestions
 ```
+_[iTerm Nord color scheme](https://github.com/arcticicestudio/nord-iterm2)_
+
 _iTerm + solarized dark fix_
 ```
 echo ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE=\'fg=10\' >> $ZSH_CUSTOM/zsh-autosuggestions_custom.zsh 
