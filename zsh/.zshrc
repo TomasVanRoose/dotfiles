@@ -66,6 +66,9 @@ export PYTHON_CONFIGURE_OPTS="--enable-framework" # Make matplotlib work
 export RUBY_CONFIGURE_OPTS="--with-openssl-dir=$(brew --prefix openssl@1.1)"
 eval "$(rbenv init -)"
 
+# GPG
+export GPG_TTY=$(tty)
+
 # Fuzzy find
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
